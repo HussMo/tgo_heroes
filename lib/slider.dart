@@ -175,7 +175,6 @@ class _ProductCardState extends State<ProductCard> {
                     MaterialPageRoute(builder: (context) => ProductCard()));
               },
               child: Icon((Icons.addchart_sharp))),
-          Icon((Icons.search)),
           InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(

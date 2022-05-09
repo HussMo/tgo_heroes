@@ -121,7 +121,6 @@ class _MainScreenState extends State<MainScreen> {
                       builder: (context) => const VerticalCardPagerExample()));
                 },
                 child: const Icon((Icons.home))),
-            const Icon((Icons.search)),
           ],
         ));
   }

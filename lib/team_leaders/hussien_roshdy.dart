@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/Search.dart';
 
 import '../Home_visitors.dart';
 import '../slider.dart';
@@ -14,16 +15,8 @@ class hussien_roshdy extends StatefulWidget {
 }
 
 class _hussien_roshdyState extends State<hussien_roshdy> {
-  getData() async {
-    CollectionReference noteRef =
-        FirebaseFirestore.instance.collection('Hussien Roshdy');
-    await noteRef.get().then((value) {
-      value.docs.forEach((element) {
-        print(element.data);
-      });
-    });
-  }
-
+  CollectionReference noteRef =
+      FirebaseFirestore.instance.collection('Hussien Roshdy');
   int ci = 0;
   int Index = 1;
 
@@ -38,9 +31,6 @@ class _hussien_roshdyState extends State<hussien_roshdy> {
           'Performance View',
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         )),
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-        ],
       ),
       // drawer: Drawer(
       //   backgroundColor: Colors.white,
@@ -194,7 +184,7 @@ class _hussien_roshdyState extends State<hussien_roshdy> {
           ),
         ),
         child: StreamBuilder<QuerySnapshot>(
-            stream: getData().snapshots(),
+            stream: noteRef.snapshots(),
             builder: (context, snapshot) {
               if (snapshot.hasError) {
                 return Center(child: Text('No Data'));
@@ -287,7 +277,6 @@ class _hussien_roshdyState extends State<hussien_roshdy> {
                     MaterialPageRoute(builder: (context) => ProductCard()));
               },
               child: Icon((Icons.addchart_sharp))),
-          Icon((Icons.search)),
           InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
@@ -321,5 +310,37 @@ class _hussien_roshdyState extends State<hussien_roshdy> {
       ),
 */
     );
+  }
+}
+
+class SearchData extends SearchDelegate {
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+          onPressed: () {
+            query = '';
+          },
+          icon: Icon(Icons.close)),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(Icons.arrow_back_sharp));
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    return Text('Search here');
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    return search();
   }
 }
