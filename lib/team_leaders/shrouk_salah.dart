@@ -2,22 +2,24 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/Search.dart';
 
 import '../Home_visitors.dart';
 import '../slider.dart';
 
-class sayed_gamal extends StatefulWidget {
-  const sayed_gamal({Key? key}) : super(key: key);
+class shrouk_salah extends StatefulWidget {
+  const shrouk_salah({Key? key}) : super(key: key);
 
   @override
-  _sayed_gamalState createState() => _sayed_gamalState();
+  _shrouk_salahState createState() => _shrouk_salahState();
 }
 
-class _sayed_gamalState extends State<sayed_gamal> {
+class _shrouk_salahState extends State<shrouk_salah> {
   CollectionReference noteRef =
-      FirebaseFirestore.instance.collection('Sayed Gamal');
+      FirebaseFirestore.instance.collection('Shrouk Salah');
   int ci = 0;
   int Index = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,13 +31,6 @@ class _sayed_gamalState extends State<sayed_gamal> {
           'Performance View',
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         )),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(Icons.arrow_back)),
-        ],
       ),
       // drawer: Drawer(
       //   backgroundColor: Colors.white,
@@ -325,5 +320,37 @@ class _sayed_gamalState extends State<sayed_gamal> {
       ),
 */
     );
+  }
+}
+
+class SearchData extends SearchDelegate {
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+          onPressed: () {
+            query = '';
+          },
+          icon: Icon(Icons.close)),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(Icons.arrow_back_sharp));
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    return Text('Search here');
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    return search();
   }
 }

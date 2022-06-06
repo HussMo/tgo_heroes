@@ -255,6 +255,16 @@ class _hussien_roshdyState extends State<hussien_roshdy> {
                                       fontSize: 20,
                                       color: Colors.white),
                                 ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  'No.issues is ${store!["0"][2]}',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 20,
+                                      color: Colors.white),
+                                ),
                               ],
                             ),
                           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/team_leaders/hussien_roshdy.dart';
 import 'package:test_app/team_leaders/sayed_gamal.dart';
+import 'package:test_app/team_leaders/shrouk_salah.dart';
 
 class Menuscreen extends StatefulWidget {
   const Menuscreen({Key? key}) : super(key: key);
@@ -51,19 +52,6 @@ class _MenuscreenState extends State<Menuscreen> {
                     color: Colors.black),
               ),
               children: <Widget>[
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
-                  },
-                  child: const Text(
-                    "Sayed Gamal",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -89,7 +77,7 @@ class _MenuscreenState extends State<Menuscreen> {
                         builder: (context) => const sayed_gamal()));
                   },
                   child: const Text(
-                    "Nourhan Ahmed",
+                    "Sayed Gamal",
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -102,71 +90,7 @@ class _MenuscreenState extends State<Menuscreen> {
                 InkWell(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
-                  },
-                  child: const Text(
-                    "Ahmed Refaat",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
-                  },
-                  child: const Text(
-                    "Mohamed Sobhy",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
-                  },
-                  child: const Text(
-                    "Almoatasem bellah",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
-                  },
-                  child: const Text(
-                    "Amal Hagag",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const sayed_gamal()));
+                        builder: (context) => const shrouk_salah()));
                   },
                   child: const Text(
                     "Shrouk Salah",
@@ -175,6 +99,18 @@ class _MenuscreenState extends State<Menuscreen> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 const SizedBox(
                   height: 20,

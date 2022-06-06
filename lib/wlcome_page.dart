@@ -75,7 +75,7 @@ class _welcome_pageState extends State<welcome_page> {
                       iconSize: 40,
                       color: Colors.black,
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => VerticalCardPagerExample()));
                       },
                       icon: Icon(Icons.double_arrow_outlined)),

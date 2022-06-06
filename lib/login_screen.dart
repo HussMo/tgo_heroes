@@ -151,9 +151,10 @@ class _Loign_pageState extends State<Loign_page> {
                             onPressed: () async {
                               var user = await signIn();
                               if (user != null) {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) =>
-                                        const welcome_page()));
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const welcome_page()));
                               } else {
                                 print('not found');
                               }
