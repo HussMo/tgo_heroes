@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "254650691706",
-    "project_id": "tgoperformance",
-    "storage_bucket": "tgoperformance.appspot.com"
+    "project_number": "240731981148",
+    "project_id": "tgoperformance-2b0c4",
+    "storage_bucket": "tgoperformance-2b0c4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:254650691706:android:c993114f5fc62066ef0bc3",
+        "mobilesdk_app_id": "1:240731981148:android:6e2b008be3b95f9c4a6d99",
         "android_client_info": {
           "package_name": "com.example.tgo_heroes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "254650691706-b28e0g64ru9nblhpqfiqhgjk0h8e67r9.apps.googleusercontent.com",
+          "client_id": "240731981148-ai3kdfd5mfl4qvp9joldom4335aidkjk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.tgo_heroes",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "254650691706-livbo4bdppoavg934s11af8skmkjpsh7.apps.googleusercontent.com",
+          "client_id": "240731981148-dqtlnfk8669cdj64t3s83def43ufdabs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAZdJSaW3phZugkRmM9nSPe39AvVe4zP44"
+          "current_key": "AIzaSyCck9Ug9psj2obsT7UO89lOeGOEKKn8Hvs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "254650691706-livbo4bdppoavg934s11af8skmkjpsh7.apps.googleusercontent.com",
+              "client_id": "240731981148-dqtlnfk8669cdj64t3s83def43ufdabs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
