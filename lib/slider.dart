@@ -15,17 +15,12 @@ class _ProductCardState extends State<ProductCard> {
   int _current = 0;
   dynamic _selectedIndex = {};
 
-  CarouselController _carouselController = new CarouselController();
+  final CarouselController _carouselController = CarouselController();
 
   final List<dynamic> _products = [
     {
-      'title': 'Haidy Adel',
-      'image': 'images/Haidy.jpeg',
-      'description': 'Dispatcher'
-    },
-    {
-      'title': 'Ammar Mohamed',
-      'image': 'images/Ammar.jpeg',
+      'title': 'Ahmed tarek',
+      'image': 'images/Ahmed.jpeg',
       'description': 'Dispatcher'
     },
     {
@@ -34,8 +29,13 @@ class _ProductCardState extends State<ProductCard> {
       'description': 'Dispatcher'
     },
     {
-      'title': 'Sarah Samy',
-      'image': 'images/Sarah.jpeg',
+      'title': 'Ahmed tarek',
+      'image': 'images/Ahmed.jpeg',
+      'description': 'Dispatcher'
+    },
+    {
+      'title': 'Ahmed tarek',
+      'image': 'images/Ahmed.jpeg',
       'description': 'Dispatcher'
     }
   ];
